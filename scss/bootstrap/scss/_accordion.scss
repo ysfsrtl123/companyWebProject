@@ -58,7 +58,7 @@
 }
 
 .accordion-item {
-  background-color: $accordion-bg;
+  background-color: $accordion-bg red;
   border: $accordion-border-width solid $accordion-border-color;
 
   &:first-of-type {
