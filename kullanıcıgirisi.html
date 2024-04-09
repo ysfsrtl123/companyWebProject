@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
     <head>
         <meta charset="utf-8">
-        <title>Aktaş-Ticaret | Hesabım</title>
+        <title>AKTAŞ Ticaret | Kullanıcı Girişi</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -28,85 +28,105 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
-
     <body>
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" role="status"></div>
-        </div>
-        <!-- Spinner End -->
-
-
-        <!-- Navbar start -->
+        
+              <!-- Navbar start -->
         <div class="container-fluid fixed-top">
-            <div class="container topbar bg-primary d-none d-lg-block">
-                <div class="d-flex justify-content-between">
-                    <div class="top-info ps-2">
-                        <small class="me-3"><i class="fas fa-map-marker-alt me-2 text-secondary"></i> <a href="#" class="text-white">adres</a></small>
-                        <small class="me-3"><i class="fas fa-envelope me-2 text-secondary"></i><a href="#" class="text-white">E-posta</a></small>
-                    </div>
-                    <div class="top-link pe-2">
-                        <a href="#" class="text-white"><small class="text-white mx-2">Gizlilik politikası</small>/</a>
-                        <a href="#" class="text-white"><small class="text-white mx-2">Kullanım koşulları</small>/</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-0">
-                <nav class="navbar navbar-light bg-white navbar-expand-xl">
-                    <a href="anasayfa.html" class="navbar-brand"><h1 class="text-primary display-6">AKTAŞ-TİCARET</h1></a>
+           
+           
+                <nav class="navbar navbar-light bg-white navbar-expand-xl border-bottom border-3">
+                    <a href="anasayfa.html" class="navbar-brand"><h1 class="text-dark display-6">AKTAŞ-TİCARET</h1></a>
                     <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars text-primary"></span>
                     </button>
                     <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                         <div class="navbar-nav mx-auto">
                             <a href="anasayfa.html" class="nav-item nav-link">Anasayfa</a>
-                            <a href="ürünler.html" class="nav-item nav-link">ürünler</a>
+                            <a href="ürünler.html" class="nav-item nav-link">Ürünler</a>
                             <a href="mağaza-detayları.html" class="nav-item nav-link">Mağaza-Detayları</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Sayfalar</a>
+                                <div class="dropdown-menu m-0 bg-secondary rounded-0">
+                                    <a href="sepet.html" class="dropdown-item">Sepetim</a>
+                                    <a href="odemesayfası.html" class="dropdown-item active">Ödeme sayfası</a>
+                                </div>
+                            </div>
                             <a href="hakkımızda.html" class="nav-item nav-link">Hakkımızda</a>
                         </div>
                         <div class="d-flex m-3 me-0">
-                            <button class="btn-search btn border border-secondary btn-md-square rounded-circle bg-white me-4" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search text-primary"></i></button>
-                            <a href="#" class="position-relative me-4 my-auto">
+                            <a href="sepet.html" class="position-relative me-4 my-auto">
                                 <i class="fa fa-shopping-bag fa-2x" style="color: gray;"></i>
                                 <span class="position-absolute bg-secondary rounded-circle d-flex align-items-center justify-content-center text-dark px-1" style="top: -5px; left: 15px; height: 20px; min-width: 20px;">0</span>
                             </a>
-                            <a href="#" class="my-auto">
+                            <a href="hesabım.html" class="my-auto">
                                 <i class="fas fa-user fa-2x" style="color: gray;"></i>
                             </a>
                         </div>
                     </div>
                 </nav>
-            </div>
+            
         </div>
         <!-- Navbar End -->
 
 
-        <!-- orta kısım başlangıcı -->
-        <div class="container-fluid py-5 mt-5 bg-dark">
-            <div class="container py-5 bg-primary">
-                
-                    <div class="col-lg-8 col-xl-9">
-                       
-                    </div>
-            
+        <!-- Single Page Header start -->
+        <div class="container-fluid page-header py-5 ">
+            <h1 class="text-center text-white display-6">Giriş Yap</h1>
+            <ol class="breadcrumb justify-content-center mb-0">
+                <li class="breadcrumb-item"><a href="anasayfa.html" class="text-white">Anasayfa</a></li>
+                <li class="breadcrumb-item"><a href="hesabım.html" class="text-white">Hesabım</a></li>
+                <li class="breadcrumb-item active text-white">Kullanıcı Girişi</li>
+            </ol>
+        </div>
+        <!-- Single Page Header End -->
+
+       
+         <!--Üye girişi başlangıcı-->
+            <div class="container-fluid py-5">
+                <div class="row g-4">
+                        <div class="col-6 mx-auto ">
+                            <h1 class="h1">AKTAŞ-TİCARET'e Hoşgeldiniz</h1>
+                            <form>
+                                <div class="form-floating mb-3 ">
+                                    <input
+                                        type="email"
+                                        class="form-control border-dark"
+                                        name="formId1"
+                                        id="formId1"
+                                        placeholder="E-posta adresinizi giriniz"
+                                    />
+                                    <label for="formId1">E-posta</label>
+                                </div>
+                                <div class="form-floating mt-5 mb-3">
+                                   <input
+                                   type="password"
+                                   class="form-control border-dark"
+                                   name="formId2"
+                                   id="formId2"
+                                   placeholder="Şifre" />
+                                   <label for="formId2">Şifre</label>
+                                </div>
+                                <div class="form-floating">
+                                <p>Hesabın Yok Mu? <a href="yeniuye.html" class="stretched-link">Üye Ol</a></p>
+                                </div>
+                                <div class="form-floating mt-5 my-3">
+                                 <button class="btn btn-outline-secondary border border-dark w-25" type="submit"><a href="#" role="button" class="text-dark">Üye Ol</a></button>
+                                </div>
+                                
+                            </form>
+                           
+                        </div>
+                         <!--fotoğraf alanı başlangıcı-->
+                        <div class="col-6">
+                            <img src="https://placehold.co/740x500" class="" alt="Reklam resmi"/>
+                        </div>
+                        <!--fotoğraf alanı bitimi-->
+                      </div>
             </div>
-        </div>
-        <div class="container-end py-5  bg-secondary h-100 ">
-           <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action ">Geçmiş Siparişlerim</a>
-              <a href="#" class="list-group-item list-group-item-action ">Sepetim</a>
-                <a href="#" class="list-group-item list-group-item-action ">A fourth link item</a>
-           </div>
-        </div>
-        <!--orta kısım bitimi-->
-
-
-     
-
-
-         <!-- Footer başlangıcı -->
-         <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+         <!--üye girişi alanı bitimi-->      
+                  
+        <!-- Footer başlangıcı -->
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
             <div class="container py-5">
                 <div class="pb-4 mb-4" style="border-bottom: 1px solid rgba(226, 175, 24, 0.5) ;">
                     <div class="row g-4">
@@ -143,8 +163,8 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="d-flex flex-column text-start footer-item">
                             <h4 class="text-light mb-3">MAĞAZA BİLGİSİ</h4>
-                            <a class="btn-link" href="hakkımızda.html">HAKKIMIZDA</a>
-                           
+                            <a class="btn-link" href="">HAKKIMIZDA</a>
+                            <a class="btn-link" href="iletisim.html">İLETİŞİM</a>
                             <a class="btn-link" href="">GİZLİLİK POLİTİKASI</a>
                             <a class="btn-link" href=""> HÜKÜMLER VE KOŞULLAR</a>
                             <a class="btn-link" href="">İADE POLİTİKASI</a>
@@ -174,41 +194,5 @@
             </div>
         </div>
         <!-- Footer End -->
-
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright bg-dark py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>AKTAŞ-TİCARET</a>, Tüm Hakları Saklıdır.</span>
-                    </div>
-                    <div class="col-md-6 my-auto text-center text-md-end text-white">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Copyright End -->
-
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-dark border-3 border-secondary rounded-circle back-to-top"><i class="fa fa-arrow-up" style="color: white;"></i></a>   
-
-        
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
     </body>
-
 </html>
