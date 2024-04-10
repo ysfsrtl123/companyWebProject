@@ -29,8 +29,28 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
+        <script>
+        //düğme olay dinleyicisi eventlistener programı
+        (() => {
+            'use strict'
+          
+           
+            const forms = document.querySelectorAll('.needs-validation')
+          
+           
+            Array.from(forms).forEach(form => {
+              form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+          
+                form.classList.add('was-validated')
+              }, false)
+            })
+          })()</script>
         
-              <!-- Navbar start -->
+              <!-- Navbar başlangıcı -->
         <div class="container-fluid fixed-top">
            
            
@@ -66,10 +86,10 @@
                 </nav>
             
         </div>
-        <!-- Navbar End -->
+        <!-- Navbar bitimi -->
 
 
-        <!-- Single Page Header start -->
+        <!-- site ağacı başlangıcı -->
         <div class="container-fluid page-header py-5 ">
             <h1 class="text-center text-white display-6">Üye Ol</h1>
             <ol class="breadcrumb justify-content-center mb-0">
@@ -78,16 +98,16 @@
                 <li class="breadcrumb-item active text-white">Üye OL</li>
             </ol>
         </div>
-        <!-- Single Page Header End -->
+        <!-- site ağacı bitimi -->
 
        
          <!--Üye girişi başlangıcı-->
             <div class="container-fluid py-5">
-                <div class="row g-4">
-                        <div class="col-6 mx-auto ">
-                            <h1 class="h1">AKTAŞ-TİCARET'e Hoşgeldiniz</h1>
-                            <form>
-                                <div class="form-floating mb-3 ">
+                <div class="row ">
+                        <div class="col-6  ">
+                            <form action="#" class="form-control needs-validation  " novalidate>
+                                <h1 class="h1 mb-4">AKTAŞ-TİCARET'e Hoşgeldiniz</h1>
+                                <div class="form-floating mb-4 ">
                                     <input
                                         type="email"
                                         class="form-control border-dark"
@@ -97,7 +117,7 @@
                                     />
                                     <label for="formId1">E-posta</label>
                                 </div>
-                                <div class="form-floating mt-5 mb-3">
+                                <div class="form-floating mt-5 mb-4">
                                    <input
                                    type="password"
                                    class="form-control border-dark"
@@ -106,7 +126,7 @@
                                    placeholder="Şifre" required/>
                                    <label for="formId2">Şifre</label>
                                 </div>
-                                <div class="form-floating mt-5 mb-3">
+                                <div class="form-floating mt-5 mb-4">
                                     <input
                                     type="password"
                                     class="form-control border-dark"

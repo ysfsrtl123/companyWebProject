@@ -29,11 +29,28 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
-        
-              <!-- Navbar start -->
+        <script>
+        // düğme olaydinleyicisi eventlistener programı
+        (() => {
+            'use strict'
+          
+           
+            const forms = document.querySelectorAll('.needs-validation')
+          
+          
+            Array.from(forms).forEach(form => {
+              form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+          
+                form.classList.add('was-validated')
+              }, false)
+            })
+          })()</script>
+              <!-- Navbar başlangıcı -->
         <div class="container-fluid fixed-top">
-           
-           
                 <nav class="navbar navbar-light bg-white navbar-expand-xl border-bottom border-3">
                     <a href="anasayfa.html" class="navbar-brand"><h1 class="text-dark display-6">AKTAŞ-TİCARET</h1></a>
                     <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -66,10 +83,10 @@
                 </nav>
             
         </div>
-        <!-- Navbar End -->
+        <!-- Navbar bitimi -->
 
 
-        <!-- Single Page Header start -->
+        <!-- site ağacı başlangıcı -->
         <div class="container-fluid page-header py-5 ">
             <h1 class="text-center text-white display-6">Giriş Yap</h1>
             <ol class="breadcrumb justify-content-center mb-0">
@@ -78,16 +95,16 @@
                 <li class="breadcrumb-item active text-white">Kullanıcı Girişi</li>
             </ol>
         </div>
-        <!-- Single Page Header End -->
+        <!--site ağacı bitimi -->
 
        
          <!--Üye girişi başlangıcı-->
             <div class="container-fluid py-5">
                 <div class="row g-4">
-                        <div class="col-6 mx-auto ">
-                            <h1 class="h1">AKTAŞ-TİCARET'e Hoşgeldiniz</h1>
-                            <form>
-                                <div class="form-floating mb-3 ">
+                        <div class="col-6 mx-auto ">      
+                            <form action="#" class="form-control needs-validation"novalidate>
+                                <h1 class="h1 mb-4">AKTAŞ-TİCARET'e Hoşgeldiniz</h1>
+                                <div class="form-floating  ">
                                     <input
                                         type="email"
                                         class="form-control border-dark"

@@ -30,7 +30,26 @@
     </head>
 
     <body>
-
+     <script>
+     //Düğme olay dinleyicisi programı eventlistener
+     (() => {
+        'use strict'
+      
+      
+        const forms = document.querySelectorAll('.needs-validation')
+      
+       
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+      
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()</script>
         <!-- Spinner Start -->
         <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
             <div class="spinner-grow text-primary" role="status"></div>
@@ -104,7 +123,7 @@
         <div class="container-fluid py-5">
             <div class="container py-5">
                 <h1 class="mb-4"></h1>
-                <form action="#">
+                <form action="#" class="form-control needs-validation" novalidate>
                     <div class="row g-5">
                         <div class="col-md-12 col-lg-6 col-xl-7">
                             <div class="row">
