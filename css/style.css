@@ -494,4 +494,7 @@
     line-height: 35px;
 }
 /*** Footer End ***/
+#wp:hover {
+    color: darkgreen;
+}
 
